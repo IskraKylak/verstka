@@ -1415,13 +1415,13 @@ body {
 
   .header_submenu {
     padding: 6.5217391304vw;
-    grid-gap: 3.6231884058vw;
+    grid-gap: 4.8309178744vw;
     min-width: 50.9661835749vw;
     left: 38.4057971014vw;
   }
 
   .header_submenu_item {
-    font-size: 2.8985507246vw;
+    font-size: 3.8647342995vw;
   }
 
   .header_submenu_item:hover {
@@ -1429,13 +1429,13 @@ body {
   }
 
   .header_menu {
-    grid-gap: 3.6231884058vw;
+    grid-gap: 4.8309178744vw;
     min-width: 38.6473429952vw;
     padding: 0 4.8309178744vw;
   }
 
   .header_menu_item {
-    font-size: 2.8985507246vw;
+    font-size: 3.8647342995vw;
   }
 
   .header_right {
