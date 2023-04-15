@@ -53,8 +53,89 @@
 }
 
 @media screen and (max-width: $tablet) {
-
+    .popular {
+        padding: tablet-vw(0) 0;
+        margin-bottom: tablet-vw(50);
+    
+        &_title {
+            margin-bottom: tablet-vw(20);
+        }
+    
+        &_list {
+            max-width: none;
+            width: 60%;
+            position: relative;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: tablet-vw(15);
+            justify-content: flex-start;
+        }
+    
+        &_item {
+            font-size: tablet-vw(18);
+            grid-gap: tablet-vw(10);
+    
+            &_circle {
+                width: tablet-vw(24);
+                height: tablet-vw(24);
+    
+                &:before {
+                    width: tablet-vw(10);
+                    height: tablet-vw(10);
+                }
+            }
+        }
+    
+        &_img {
+            max-width: none;
+            width: 30%;
+            right: tablet-vw(52);
+            z-index: 4;
+        }
+    }
 }
 @media screen and (max-width: $mobile) {
-
+    .popular {
+        padding: mobile-vw(0) 0;
+        margin-bottom: mobile-vw(50);
+        overflow: hidden;
+    
+        &_title {
+            margin-bottom: mobile-vw(20);
+        }
+    
+        &_list {
+            max-width: none;
+            width: 100%;
+            position: relative;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: mobile-vw(15);
+            justify-content: flex-start;
+        }
+    
+        &_item {
+            font-size: mobile-vw(18);
+            grid-gap: mobile-vw(10);
+    
+            &_circle {
+                width: mobile-vw(24);
+                height: mobile-vw(24);
+    
+                &:before {
+                    width: mobile-vw(10);
+                    height: mobile-vw(10);
+                }
+            }
+        }
+    
+        &_img {
+            max-width: none;
+            width: mobile-vw(300);
+            right: mobile-vw(-100);
+            z-index: 4;
+        }
+    }
 }

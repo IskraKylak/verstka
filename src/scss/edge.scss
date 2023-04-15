@@ -42,11 +42,11 @@
                 background-repeat: no-repeat;
                 background-size: 100%;
                 // display: block;
-                min-width: 11px;
-                max-width: 11px;
-                height: 11px;
-                min-height: 11px;
-                max-height: 11px;
+                min-width: desktop-vw(11);
+                max-width: desktop-vw(11);
+                height: desktop-vw(11);
+                min-height: desktop-vw(11);
+                max-height: desktop-vw(11);
             }
 
             &:after {
@@ -63,8 +63,88 @@
 }
 
 @media screen and (max-width: $tablet) {
+    .edge {
 
+        &_list {
+            display: flex;
+            grid-gap: tablet-vw(20);
+            flex-wrap: wrap;
+    
+            &_item {
+                width: tablet-vw(245);
+                width: auto;
+                padding: tablet-vw(10);
+                grid-gap: tablet-vw(11);
+    
+                img {
+                    width: tablet-vw(55);
+                    height: tablet-vw(55);
+                }
+            }
+    
+            &_name {
+                font-size: tablet-vw(14);
+                max-width: tablet-vw(150);
+                padding-bottom: tablet-vw(10);
+    
+                &_star {
+                    display: inline-block;
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.49988 -0.000762939L6.7347 3.79964H10.7307L7.49787 6.14842L8.7327 9.94883L5.49988 7.60005L2.26706 9.94883L3.50189 6.14842L0.269067 3.79964H4.26505L5.49988 -0.000762939Z' fill='%23FFF500'/%3e%3c/svg%3e");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    // display: block;
+                    min-width: tablet-vw(11);
+                    max-width: tablet-vw(11);
+                    height: tablet-vw(11);
+                    min-height: tablet-vw(11);
+                    max-height: tablet-vw(11);
+                }
+    
+                &:after {
+                    height: 2px;
+                    width: tablet-vw(60);
+                    left: calc(50% - tablet-vw(30));
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: $mobile) {
+    .edge {
 
+        &_list {
+            grid-gap: mobile-vw(20);
+    
+            &_item {
+                width: mobile-vw(245);
+                padding: mobile-vw(10);
+                grid-gap: mobile-vw(11);
+    
+                img {
+                    width: mobile-vw(55);
+                    height: mobile-vw(55);
+                }
+            }
+    
+            &_name {
+                font-size: mobile-vw(14);
+                max-width: mobile-vw(150);
+                padding-bottom: mobile-vw(10);
+    
+                &_star {
+                    min-width: mobile-vw(11);
+                    max-width: mobile-vw(11);
+                    height: mobile-vw(11);
+                    min-height: mobile-vw(11);
+                    max-height: mobile-vw(11);
+                }
+    
+                &:after {
+                    height: 2px;
+                    width: mobile-vw(60);
+                    left: calc(50% - mobile-vw(30));
+                }
+            }
+        }
+    }
 }

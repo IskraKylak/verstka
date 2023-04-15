@@ -92,6 +92,7 @@
     max-width: desktop-vw(840);
 
     &_item {
+      width: max-content;
       font-style: normal;
       font-weight: 600;
       font-size: desktop-vw(18);
@@ -140,6 +141,11 @@
     width: 100%;
     max-width: desktop-vw(140);
 
+    img {
+      width: desktop-vw(15);
+      height: desktop-vw(15);
+    }
+
     &_btn {
       background: #FFFFFF;
       border: 1px solid #FFF500;
@@ -170,7 +176,7 @@
   &_lang {
     background: #FFFFFF;
     border: 1px solid #C4C4C4;
-    border-radius: 10px;
+    border-radius: desktop-vw(10);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,9 +217,10 @@
     padding: desktop-vw(21) 0 desktop-vw(50);
 
     &_item {
+      display: block;
       font-style: normal;
       font-weight: 400;
-      font-size: desktop-vw(16);
+      font-size: desktop-vw(12);
       line-height: 120%;
       color: #020202;
       text-decoration: none;
@@ -230,6 +237,7 @@
     filter: drop-shadow(20px 20px 20px rgba(255, 245, 0, 0.5));
     border-radius: 50px;
     display: flex;
+    align-items: center;
     padding: 0 desktop-vw(14);
   }
 
@@ -247,15 +255,15 @@
   .header {
 
     &_burger {
-      height: tablet-vw(45);
-      width: tablet-vw(45);
+      height: tablet-vw(40);
+      width: tablet-vw(40);
       padding: 0 tablet-vw(7);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border-radius: 5px;
+      border-radius: tablet-vw(10);
       background: #fff500;
-      grid-gap: tablet-vw(6);
+      grid-gap: tablet-vw(4);
   
       &_line {
         min-height: tablet-vw(4);
@@ -276,15 +284,23 @@
     }
   
     &_content {
-      height: tablet-vw(106);
+      height: tablet-vw(80);
       grid-gap: tablet-vw(30);
     }
   
     &_submenu {
-      top: tablet-vw(40);
+      position: fixed;
+      top: 0;
       padding: tablet-vw(27);
       grid-gap: tablet-vw(15);
-      min-width: tablet-vw(311);
+      min-width: tablet-vw(211);
+      left: tablet-vw(199);
+      height: 100vh;
+      justify-content: center;
+      grid-gap: tablet-vw(16);
+      border-radius: 0;
+      border: 0;
+      border-right: 1px solid #FFF500;
   
       &_item {
         font-size: tablet-vw(16);
@@ -302,6 +318,7 @@
       flex-direction: column;
       justify-content: center;
       grid-gap: tablet-vw(16);
+      min-width: tablet-vw(200);
       left: 0;
       top: 0;
       height: 100vh;
@@ -318,6 +335,7 @@
 
       &_item {
         font-size: tablet-vw(18);
+        text-align: left;
       }
     }
   
@@ -327,6 +345,11 @@
   
     &_search {
       max-width: tablet-vw(140);
+
+      img {
+        width: tablet-vw(15);
+        height: tablet-vw(15);
+      }
   
       &_btn {
         height: tablet-vw(39);
@@ -341,6 +364,7 @@
     &_lang {
       width: tablet-vw(40);
       height: tablet-vw(40);
+      border-radius: tablet-vw(10);
       
       &.active {
         font-size: tablet-vw(14);
@@ -372,5 +396,109 @@
   }
 }
 @media screen and (max-width: $mobile) {
+  .header {
 
+    &_burger {
+      height: mobile-vw(30);
+      width: mobile-vw(30);
+      padding: 0 mobile-vw(5);
+      border-radius: mobile-vw(5);
+      grid-gap: mobile-vw(3);
+  
+      &_line {
+        min-height: mobile-vw(3);
+      }
+    }
+    
+    &_logo {
+      max-width: none;
+      height: mobile-vw(25);
+    }
+  
+    &_content {
+      height: mobile-vw(50);
+      grid-gap: mobile-vw(10);
+    }
+  
+    &_submenu {
+      padding: mobile-vw(27);
+      grid-gap: mobile-vw(15);
+      min-width: mobile-vw(211);
+      left: mobile-vw(159);
+  
+      &_item {
+        font-size: mobile-vw(12);
+  
+        &:hover {
+          font-size: mobile-vw(16);
+        }
+      }
+    }
+  
+    &_menu {
+      grid-gap: mobile-vw(15);
+      min-width: mobile-vw(160);
+      padding: 0 mobile-vw(20);
+
+      &_item {
+        font-size: mobile-vw(12);
+      }
+    }
+  
+    &_right {
+      max-width: mobile-vw(170);
+    }
+  
+    &_search {
+      max-width: mobile-vw(100);
+      
+      img {
+        width: mobile-vw(15);
+        height: mobile-vw(15);
+      }
+
+      &_btn {
+        height: mobile-vw(30);
+        font-size: mobile-vw(10);
+      }
+    }
+  
+    &_langs {
+      max-width: mobile-vw(65);
+    }
+  
+    &_lang {
+      width: mobile-vw(30);
+      height: mobile-vw(30);
+      border-radius: mobile-vw(5);
+      font-size: mobile-vw(12);
+      
+      &.active {
+        font-size: mobile-vw(12);
+      }
+    }
+  }
+  
+  .formSearch {
+    padding: mobile-vw(15) mobile-vw(10);
+    min-width: mobile-vw(290);
+  
+    &_listSearch {
+      grid-gap: mobile-vw(15);
+      padding: mobile-vw(11) 0 mobile-vw(20);
+  
+      &_item {
+        font-size: mobile-vw(12);
+      }
+    }
+  
+    &_wrapInput {
+      padding: 0 mobile-vw(14);
+    }
+  
+    &_input {
+      height: mobile-vw(25);
+      padding: 0 mobile-vw(5);
+    }
+  }
 }

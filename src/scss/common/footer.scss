@@ -135,8 +135,135 @@
 }
 
 @media screen and (max-width: $tablet) {
+    .footer {
+        padding-top: tablet-vw(43);
 
+        &_img {
+            height: 100%;
+            width: auto;
+        }
+    
+        &_content {
+            padding: tablet-vw(30) tablet-vw(10) tablet-vw(30) tablet-vw(10);
+        }
+    
+        &_copyright {
+            font-size: tablet-vw(14);
+            height: tablet-vw(43);
+        }
+    
+        &_menu {
+            grid-gap: tablet-vw(20);
+            margin-bottom: tablet-vw(30);
+            flex-wrap: wrap;
+    
+            &_item {
+                font-size: tablet-vw(18);
+            }
+        }
+    
+        &_btn {
+            width: tablet-vw(323);
+            padding: tablet-vw(15) 0;
+            font-size: tablet-vw(16);
+        }
+
+        &_info {
+            flex-wrap: wrap;
+            grid-gap: tablet-vw(40);
+            justify-content: space-around;
+        }
+    
+        &_list {
+            grid-gap: tablet-vw(18);
+    
+            &_item {
+                font-size: tablet-vw(16);
+                grid-gap: tablet-vw(8);
+    
+                &_number {
+                    font-size: tablet-vw(16);
+                }
+    
+                &_circle {
+                    margin-top: tablet-vw(3);
+                    width: tablet-vw(13);
+                    height: tablet-vw(13);
+        
+                    &:before {
+                        width: tablet-vw(5);
+                        height: tablet-vw(5);
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: $mobile) {
+    .footer {
+        padding-top: mobile-vw(43);
 
+        &_img {
+            height: 100%;
+            width: auto;
+        }
+    
+        &_content {
+            padding: mobile-vw(30) mobile-vw(10) mobile-vw(30) mobile-vw(10);
+        }
+    
+        &_copyright {
+            font-size: mobile-vw(14);
+            height: mobile-vw(43);
+        }
+    
+        &_menu {
+            grid-gap: mobile-vw(20);
+            margin-bottom: mobile-vw(30);
+            flex-wrap: wrap;
+    
+            &_item {
+                font-size: mobile-vw(18);
+            }
+        }
+    
+        &_btn {
+            width: mobile-vw(323);
+            padding: mobile-vw(15) 0;
+            font-size: mobile-vw(16);
+        }
+
+        &_info {
+            flex-direction: column;
+            grid-gap: mobile-vw(30);
+            justify-content: space-around;
+        }
+    
+        &_list {
+            grid-gap: mobile-vw(12);
+            width: mobile-vw(220);
+            margin: 0 auto;
+    
+            &_item {
+                font-size: mobile-vw(16);
+                grid-gap: mobile-vw(8);
+                width: max-content;
+    
+                &_number {
+                    font-size: mobile-vw(16);
+                }
+    
+                &_circle {
+                    margin-top: mobile-vw(3);
+                    width: mobile-vw(13);
+                    height: mobile-vw(13);
+        
+                    &:before {
+                        width: mobile-vw(5);
+                        height: mobile-vw(5);
+                    }
+                }
+            }
+        }
+    }
 }

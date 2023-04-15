@@ -80,8 +80,101 @@
 }
 
 @media screen and (max-width: $tablet) {
-
+    .blockInfo {
+        padding: tablet-vw(100) 0 tablet-vw(69) 0;
+    
+        &_content {
+            grid-gap: tablet-vw(40);
+        }
+    
+        &_title {
+            margin: 0 0 tablet-vw(10) 0;
+        }
+    
+        &_card {
+            padding: tablet-vw(20);
+    
+            &_textMas {
+                font-size: tablet-vw(14);
+                margin-top: tablet-vw(10);
+        
+                &:after {
+                    bottom: tablet-vw(-5);
+                }
+            }
+            
+            &_wrapConatent {
+                grid-gap: tablet-vw(0);
+            }
+    
+            &_part {
+                max-width: 65%;
+                grid-gap: tablet-vw(10);
+            }
+    
+            &_name {
+                font-size: tablet-vw(14);
+                margin-bottom: tablet-vw(5);
+            }
+    
+            &_text {
+                font-size: tablet-vw(14);
+            }
+    
+            &_img {
+                max-width: 30%;
+            }
+        }
+    }
 }
 @media screen and (max-width: $mobile) {
+    .blockInfo {
+        padding: mobile-vw(40) 0 mobile-vw(69) 0;
+    
+        &_content {
+            grid-gap: mobile-vw(40);
+        }
+    
+        &_title {
+            margin: 0 0 mobile-vw(10) 0;
+        }
+    
+        &_card {
+            padding: mobile-vw(10);
 
+            &_wrapConatent {
+                flex-direction: column-reverse;
+                grid-gap: mobile-vw(14);
+            }
+    
+            &_textMas {
+                font-size: mobile-vw(14);
+                margin-top: mobile-vw(10);
+        
+                &:after {
+                    bottom: mobile-vw(-5);
+                }
+            }
+    
+            &_part {
+                max-width: none;
+                grid-gap: mobile-vw(10);
+            }
+    
+            &_name {
+                font-size: mobile-vw(12);
+                margin-bottom: mobile-vw(5);
+            }
+    
+            &_text {
+                font-size: mobile-vw(12);
+            }
+    
+            &_img {
+                max-width: none;
+                width: auto;
+                height: mobile-vw(150);
+            }
+        }
+    }
 }

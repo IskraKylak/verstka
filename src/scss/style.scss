@@ -114,6 +114,16 @@ body{
 }
 
 @media screen and (max-width: $tablet) {
+	h3 {
+		font-size: tablet-vw(20);
+	}
+	
+	body{
+		font-family: 'Montserrat';
+		font-weight: 400;
+		font-size: desktop-vw(14);
+	}
+
 	.container {
 		max-width: tablet-vw(1920);
 		padding: 0 tablet-vw(20);
@@ -123,20 +133,30 @@ body{
 	}
 
 	.blockFon {
-		padding: tablet-vw(70) 0 0;
+		padding: tablet-vw(50) 0 0;
 	}
 }
 @media screen and (max-width: $mobile) {
+	h3 {
+		font-size: mobile-vw(16);
+	}
+	
+	body{
+		font-family: 'Montserrat';
+		font-weight: 400;
+		font-size: mobile-vw(14);
+	}
+
 	.container {
-	max-width: mobile-vw(1158);
-	padding: 0 mobile-vw(20);
-	margin-right: auto;
-	margin-left: auto;
-	height: 100%;
+		max-width: mobile-vw(1158);
+		padding: 0 mobile-vw(20);
+		margin-right: auto;
+		margin-left: auto;
+		height: 100%;
 	}
 
 	.blockFon {
-		padding: mobile-vw(70) 0 0;
+		padding: mobile-vw(40) 0 0;
 	}
 }
 
