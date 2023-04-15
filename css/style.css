@@ -118,6 +118,15 @@ body {
   height: 2.8645833333vw;
 }
 
+.header_logo_mob {
+  display: none;
+}
+
+.header_logo_mob img {
+  width: auto;
+  height: 100%;
+}
+
 .header_logo img {
   width: auto;
   height: 100%;
@@ -1379,24 +1388,28 @@ body {
   }
 
   .header_burger {
-    height: 7.2463768116vw;
-    width: 7.2463768116vw;
+    height: 9.6618357488vw;
+    width: 9.6618357488vw;
     padding: 0 1.2077294686vw;
     border-radius: 1.2077294686vw;
-    grid-gap: 0.7246376812vw;
+    grid-gap: 1.4492753623vw;
   }
 
   .header_burger_line {
-    min-height: 0.7246376812vw;
+    min-height: 0.9661835749vw;
   }
 
   .header_logo {
-    max-width: none;
-    height: 6.038647343vw;
+    display: none;
+  }
+
+  .header_logo_mob {
+    display: block;
+    height: 9.6618357488vw;
   }
 
   .header_content {
-    height: 12.077294686vw;
+    height: 16.9082125604vw;
     grid-gap: 2.4154589372vw;
   }
 
@@ -1426,11 +1439,11 @@ body {
   }
 
   .header_right {
-    max-width: 41.0628019324vw;
+    max-width: 50.7246376812vw;
   }
 
   .header_search {
-    max-width: 24.154589372vw;
+    max-width: 28.9855072464vw;
   }
 
   .header_search img {
@@ -1439,17 +1452,17 @@ body {
   }
 
   .header_search_btn {
-    height: 7.2463768116vw;
+    height: 9.6618357488vw;
     font-size: 2.4154589372vw;
   }
 
   .header_langs {
-    max-width: 15.7004830918vw;
+    max-width: 20.5314009662vw;
   }
 
   .header_lang {
-    width: 7.2463768116vw;
-    height: 7.2463768116vw;
+    width: 9.6618357488vw;
+    height: 9.6618357488vw;
     border-radius: 1.2077294686vw;
     font-size: 2.8985507246vw;
   }
