@@ -1,0 +1,90 @@
+<script>
+// получаем все элементы с классом 'js-parent'
+const aElements = document.querySelectorAll('.js-parent');
+const bElements = document.querySelectorAll('.js-child');
+// функция, которая обрабатывает событие клика на элементе 'js-parent'
+function handleClick(event) {
+   
+  // проверяем, есть ли у элемента класс 'active'
+  if (event.target.classList.contains('active')) {
+    // если есть, то убираем у него класс 'active'
+    event.target.classList.remove('active');
+    // находим элемент 'js-child' внутри текущего элемента 'js-parent'
+    const bElement = event.target.querySelector('.js-child');
+    // добавляем элементу 'js-child' класс 'hidden'
+    bElement.classList.add('hidden');
+  } else {
+    console.log(event) 
+    // если нет, то добавляем элементу 'js-parent' класс 'active'
+    event.target.classList.add('active');
+    // находим элемент 'js-child' внутри текущего элемента 'js-parent'
+    const bElement = event.target.querySelector('.js-child');
+    // убираем у элемента 'js-child' класс 'hidden'
+    bElement.classList.remove('hidden');
+  }
+  event.stopPropagation();
+}
+
+// функция, которая возвращает все элементы к начальному состоянию
+function resetElements() {
+  // убираем класс 'active' у всех элементов с классом 'js-parent'
+  aElements.forEach((aElement) => {
+    aElement.classList.remove('active');
+    // находим элемент 'js-child' внутри текущего элемента 'js-parent'
+    const bElement = aElement.querySelector('.js-child');
+    // добавляем элементу 'js-child' класс 'hidden'
+    bElement.classList.add('hidden');
+  });
+}
+
+// Создаем функцию, которая будет обрабатывать нажатия на элемент js-child
+function handleBClick(event) {
+  // Останавливаем дальнейшее всплытие события, чтобы клик на элементе js-child не вызывал обработчик на элементе js-parent
+  event.stopPropagation();
+}
+
+// Добавляем обработчик клика на элемент js-child, который не будет ничего делать
+bElements.forEach((aElement) => {
+  aElement.addEventListener('click', handleBClick);
+});
+// добавляем обработчик клика на каждый элемент 'js-parent'
+aElements.forEach((aElement) => {
+  aElement.addEventListener('click', handleClick);
+});
+
+// добавляем обработчик клика на элемент 'body'
+document.body.addEventListener('click', resetElements);
+
+// ---------------------------BURGER------------------------------------
+// Получаем элементы по классам
+const a = document.querySelector('.js-burger');
+const b = document.querySelector('.js-menu');
+
+// Создаем функцию, которая будет обрабатывать нажатия на элемент a
+function burgerClick() {
+  // Проверяем наличие класса active у элемента a
+  if (a.classList.contains('active')) {
+    // Если класс есть, то убираем его и добавляем класс d-none элементу b
+    a.classList.remove('active');
+    b.classList.add('close');
+  } else {
+    // Если класса нет, то добавляем его и убираем класс d-none у элемента b
+    a.classList.add('active');
+    b.classList.remove('close');
+  }
+}
+
+// Добавляем обработчик клика на элемент a
+a.addEventListener('click', burgerClick);
+
+// Добавляем обработчик клика на элемент body, который будет возвращать все как было
+document.body.addEventListener('click', function(event) {
+  // Проверяем, что клик был не по элементу a и его дочерним элементам
+  if (!event.target.closest('.js-burger') && !event.target.closest('.js-menu')) {
+    // Убираем класс active у элемента a и добавляем класс d-none элементу b
+    a.classList.remove('active');
+    b.classList.add('close');
+  }
+});
+
+</script>

@@ -1,0 +1,70 @@
+.edge {
+
+    &_list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        grid-gap: desktop-vw(30);
+
+        &_item {
+            width: desktop-vw(245);
+            padding: desktop-vw(15);
+            grid-gap: desktop-vw(11);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #FFFFFF;
+            box-shadow: 0px 20px 40px rgba(148, 141, 141, 0.3);
+
+            img {
+                width: desktop-vw(55);
+                height: desktop-vw(55);
+            }
+        }
+
+        &_name {
+            font-style: normal;
+            font-weight: 600;
+            font-size: desktop-vw(18);
+            line-height: 120%;
+            text-align: center;
+            color: #07512F;
+            max-width: desktop-vw(150);
+            position: relative;
+            padding-bottom: desktop-vw(17);
+            // display: flex;
+            // justify-content: center;
+
+            &_star {
+                display: inline-block;
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.49988 -0.000762939L6.7347 3.79964H10.7307L7.49787 6.14842L8.7327 9.94883L5.49988 7.60005L2.26706 9.94883L3.50189 6.14842L0.269067 3.79964H4.26505L5.49988 -0.000762939Z' fill='%23FFF500'/%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                // display: block;
+                min-width: 11px;
+                max-width: 11px;
+                height: 11px;
+                min-height: 11px;
+                max-height: 11px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: desktop-vw(60);
+                background: #DA251D;
+                bottom: 0;
+                left: calc(50% - desktop-vw(30));
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+
+}
+@media screen and (max-width: $mobile) {
+
+}

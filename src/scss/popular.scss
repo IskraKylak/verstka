@@ -1,0 +1,60 @@
+.popular {
+    position: relative;
+    padding: desktop-vw(52) 0;
+    margin-bottom: desktop-vw(50);
+
+    &_title {
+        margin-bottom: desktop-vw(40);
+    }
+
+    &_list {
+        display: flex;
+        max-width: desktop-vw(1122);
+        justify-content: space-between;
+    }
+
+    &_item {
+        font-family: 'Reem Kufi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: desktop-vw(18);
+        line-height: 120%;
+        display: flex;
+        grid-gap: desktop-vw(10);
+
+        &_circle {
+            border: 1px solid #FFF500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: desktop-vw(24);
+            height: desktop-vw(24);
+            border-radius: 50%;
+
+            &:before {
+                content: "";
+                border-radius: 50%;
+                display: block;
+                width: desktop-vw(10);
+                height: desktop-vw(10);
+                background: #DA251D;
+            }
+        }
+    }
+
+    &_img {
+        position: absolute;
+        max-width: desktop-vw(370);
+        width: 100%;
+        height: auto;
+        right: desktop-vw(52);
+        top: 0;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+
+}
+@media screen and (max-width: $mobile) {
+
+}
