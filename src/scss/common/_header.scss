@@ -220,7 +220,7 @@
       display: block;
       font-style: normal;
       font-weight: 400;
-      font-size: desktop-vw(12);
+      font-size: desktop-vw(16);
       line-height: 120%;
       color: #020202;
       text-decoration: none;
@@ -381,7 +381,7 @@
       padding: tablet-vw(21) 0 tablet-vw(50);
   
       &_item {
-        font-size: tablet-vw(16);
+        font-size: tablet-vw(14);
       }
     }
   
