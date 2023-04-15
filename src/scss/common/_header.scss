@@ -435,12 +435,12 @@
   
     &_submenu {
       padding: mobile-vw(27);
-      grid-gap: mobile-vw(15);
+      grid-gap: mobile-vw(20);
       min-width: mobile-vw(211);
       left: mobile-vw(159);
   
       &_item {
-        font-size: mobile-vw(12);
+        font-size: mobile-vw(16);
   
         &:hover {
           font-size: mobile-vw(16);
@@ -449,12 +449,12 @@
     }
   
     &_menu {
-      grid-gap: mobile-vw(15);
+      grid-gap: mobile-vw(20);
       min-width: mobile-vw(160);
       padding: 0 mobile-vw(20);
 
       &_item {
-        font-size: mobile-vw(12);
+        font-size: mobile-vw(16);
       }
     }
   
