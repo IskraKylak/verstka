@@ -10,6 +10,15 @@
     max-width: desktop-vw(290);
     height: desktop-vw(55);
 
+    &_mob {
+      display: none;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
     img {
       width: auto;
       height: 100%;
@@ -399,24 +408,28 @@
   .header {
 
     &_burger {
-      height: mobile-vw(30);
-      width: mobile-vw(30);
+      height: mobile-vw(40);
+      width: mobile-vw(40);
       padding: 0 mobile-vw(5);
       border-radius: mobile-vw(5);
-      grid-gap: mobile-vw(3);
+      grid-gap: mobile-vw(6);
   
       &_line {
-        min-height: mobile-vw(3);
+        min-height: mobile-vw(4);
       }
     }
     
     &_logo {
-      max-width: none;
-      height: mobile-vw(25);
+      display: none;
+
+      &_mob {
+        display: block;
+        height: mobile-vw(40);
+      }
     }
   
     &_content {
-      height: mobile-vw(50);
+      height: mobile-vw(70);
       grid-gap: mobile-vw(10);
     }
   
@@ -446,11 +459,11 @@
     }
   
     &_right {
-      max-width: mobile-vw(170);
+      max-width: mobile-vw(210);
     }
   
     &_search {
-      max-width: mobile-vw(100);
+      max-width: mobile-vw(120);
       
       img {
         width: mobile-vw(15);
@@ -458,18 +471,18 @@
       }
 
       &_btn {
-        height: mobile-vw(30);
+        height: mobile-vw(40);
         font-size: mobile-vw(10);
       }
     }
   
     &_langs {
-      max-width: mobile-vw(65);
+      max-width: mobile-vw(85);
     }
   
     &_lang {
-      width: mobile-vw(30);
-      height: mobile-vw(30);
+      width: mobile-vw(40);
+      height: mobile-vw(40);
       border-radius: mobile-vw(5);
       font-size: mobile-vw(12);
       
