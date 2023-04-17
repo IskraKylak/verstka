@@ -1932,6 +1932,22 @@ body {
     z-index: 4;
   }
 
+  .breadcrumbs {
+    grid-gap: 3.6231884058vw;
+    padding: 3.6231884058vw 0;
+  }
+
+  .breadcrumbs_item {
+    font-size: 3.3816425121vw;
+    grid-gap: 3.6231884058vw;
+  }
+
+  .breadcrumbs_item:after {
+    width: 2.8985507246vw;
+    height: 3.1400966184vw;
+    margin-top: 0.4830917874vw;
+  }
+
   .personal {
     padding-bottom: 12.077294686vw;
   }
