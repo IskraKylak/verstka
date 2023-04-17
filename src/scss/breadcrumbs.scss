@@ -47,3 +47,21 @@
         }
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .breadcrumbs {
+        grid-gap: mobile-vw(15);
+        padding: mobile-vw(15) 0;
+    
+        &_item {
+            font-size: mobile-vw(14);
+            grid-gap: mobile-vw(15);
+    
+            &:after {
+                width: mobile-vw(12);
+                height: mobile-vw(13);
+                margin-top: mobile-vw(2);
+            }
+        }
+    }
+}
