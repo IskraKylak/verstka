@@ -1,0 +1,109 @@
+.media {
+    padding-bottom: desktop-vw(46);
+
+    &_content {
+        background: #FFFFFF;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+        padding: desktop-vw(40) desktop-vw(26);
+        margin-bottom: desktop-vw(50);
+
+        .otherBlock_title {
+            margin-bottom: desktop-vw(20);
+        }
+
+        p {
+            margin-bottom: desktop-vw(10);
+            max-width: 1270px;
+        }
+
+        a, li, p {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: desktop-vw(16);
+            line-height: 120%;
+            color: #000000;
+        }
+
+        li {
+            margin-bottom: desktop-vw(5);
+        }
+
+        h3 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: desktop-vw(20);
+            line-height: 120%;
+            color: #DA251D;
+            margin-bottom: desktop-vw(10);
+            margin-top: desktop-vw(20);
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .media {
+        padding-bottom: tablet-vw(46);
+    
+        &_content {
+            padding: tablet-vw(40) tablet-vw(26);
+            margin-bottom: tablet-vw(50);
+    
+            .otherBlock_title {
+                margin-bottom: tablet-vw(20);
+            }
+    
+            p {
+                margin-bottom: tablet-vw(10);
+            }
+    
+            a, li, p {
+                font-size: tablet-vw(16);
+            }
+    
+            li {
+                margin-bottom: tablet-vw(5);
+            }
+    
+            h3 {
+                font-size: tablet-vw(20);
+                margin-bottom: tablet-vw(10);
+                margin-top: tablet-vw(20);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $mobile) {
+    .media {
+        padding-bottom: mobile-vw(30);
+    
+        &_content {
+            padding: mobile-vw(20) mobile-vw(10);
+            margin-bottom: mobile-vw(30);
+    
+            .otherBlock_title {
+                margin-bottom: mobile-vw(20);
+            }
+    
+            p {
+                margin-bottom: mobile-vw(10);
+            }
+    
+            a, li, p {
+                font-size: mobile-vw(16);
+            }
+    
+            li {
+                margin-bottom: mobile-vw(5);
+            }
+    
+            h3 {
+                font-size: mobile-vw(20);
+                margin-bottom: mobile-vw(10);
+                margin-top: mobile-vw(20);
+            }
+        }
+    }
+}

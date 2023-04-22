@@ -4,25 +4,28 @@ const aElements = document.querySelectorAll('.js-parent');
 const bElements = document.querySelectorAll('.js-child');
 // функция, которая обрабатывает событие клика на элементе 'js-parent'
 function handleClick(event) {
-   
-  // проверяем, есть ли у элемента класс 'active'
-  if (event.target.classList.contains('active')) {
-    // если есть, то убираем у него класс 'active'
-    event.target.classList.remove('active');
-    // находим элемент 'js-child' внутри текущего элемента 'js-parent'
-    const bElement = event.target.querySelector('.js-child');
-    // добавляем элементу 'js-child' класс 'hidden'
-    bElement.classList.add('hidden');
-  } else {
-    console.log(event) 
-    // если нет, то добавляем элементу 'js-parent' класс 'active'
-    event.target.classList.add('active');
-    // находим элемент 'js-child' внутри текущего элемента 'js-parent'
-    const bElement = event.target.querySelector('.js-child');
-    // убираем у элемента 'js-child' класс 'hidden'
-    bElement.classList.remove('hidden');
+  if (window.innerWidth <= 1199 || event.target.classList.contains("js-search")) {
+    // проверяем, есть ли у элемента класс 'active'
+    if (event.target.classList.contains('active')) {
+      console.log(event) 
+      // если есть, то убираем у него класс 'active'
+      event.target.classList.remove('active');
+      // находим элемент 'js-child' внутри текущего элемента 'js-parent'
+      const bElement = event.target.querySelector('.js-child');
+      // добавляем элементу 'js-child' класс 'hidden'
+      bElement.classList.add('hidden');
+    } else {
+      console.log(event) 
+      resetElements()
+      // если нет, то добавляем элементу 'js-parent' класс 'active'
+      event.target.classList.add('active');
+      // находим элемент 'js-child' внутри текущего элемента 'js-parent'
+      const bElement = event.target.querySelector('.js-child');
+      // убираем у элемента 'js-child' класс 'hidden'
+      bElement.classList.remove('hidden');
+    }
+    event.stopPropagation();
   }
-  event.stopPropagation();
 }
 
 // функция, которая возвращает все элементы к начальному состоянию

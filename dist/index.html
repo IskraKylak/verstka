@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230417192426">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230422161224">
     <title>Main</title>
 </head>
 
@@ -25,9 +25,32 @@
                 <div class="header_burger_line"></div>
             </div>
             <div class="header_menu js-menu close">
-                <a href="#" class="header_menu_item">
+                <div class="header_menu_item js-parent">
                     Acerca de
-                </a>
+                    <div class="header_submenu js-child hidden">
+                        <a href="#" class="header_submenu_item">
+                            Access to Commission Hearing Files
+                        </a>
+                        <a href="#" class="header_submenu_item">
+                            Contactar 2
+                        </a>
+                        <a href="#" class="header_submenu_item">
+                            Empleo 3
+                        </a>
+                        <a href="#" class="header_submenu_item">
+                            Sala multimedia 5
+                        </a>
+                        <a href="#" class="header_submenu_item">
+                            Industry Resources 6
+                        </a>
+                        <a href="#" class="header_submenu_item">
+                            Lo que hacemos
+                        </a>
+                        <a href="#" class="header_submenu_item">
+                            Quienes somos
+                        </a>
+                    </div>
+                </div>
                 <div class="header_menu_item js-parent">
                     Ley de Valores
                     <div class="header_submenu js-child hidden">
@@ -72,7 +95,7 @@
             </div>
             <div class="header_right">
                 <div class="header_search">
-                    <div class="header_search_btn js-parent">
+                    <div class="header_search_btn js-parent js-search">
                         <img src="./img/icon/search.svg" alt="img">
                         Buscar ESSCC
                         <div class="formSearch js-child hidden">
@@ -387,32 +410,35 @@
         </p>
     </div>
 </div>
-    <script src="js/app.min.js?_v=20230417192426"></script>
+    <script src="js/app.min.js?_v=20230422161224"></script>
     <script>
 // получаем все элементы с классом 'js-parent'
 const aElements = document.querySelectorAll('.js-parent');
 const bElements = document.querySelectorAll('.js-child');
 // функция, которая обрабатывает событие клика на элементе 'js-parent'
 function handleClick(event) {
-   
-  // проверяем, есть ли у элемента класс 'active'
-  if (event.target.classList.contains('active')) {
-    // если есть, то убираем у него класс 'active'
-    event.target.classList.remove('active');
-    // находим элемент 'js-child' внутри текущего элемента 'js-parent'
-    const bElement = event.target.querySelector('.js-child');
-    // добавляем элементу 'js-child' класс 'hidden'
-    bElement.classList.add('hidden');
-  } else {
-    console.log(event) 
-    // если нет, то добавляем элементу 'js-parent' класс 'active'
-    event.target.classList.add('active');
-    // находим элемент 'js-child' внутри текущего элемента 'js-parent'
-    const bElement = event.target.querySelector('.js-child');
-    // убираем у элемента 'js-child' класс 'hidden'
-    bElement.classList.remove('hidden');
+  if (window.innerWidth <= 1199 || event.target.classList.contains("js-search")) {
+    // проверяем, есть ли у элемента класс 'active'
+    if (event.target.classList.contains('active')) {
+      console.log(event) 
+      // если есть, то убираем у него класс 'active'
+      event.target.classList.remove('active');
+      // находим элемент 'js-child' внутри текущего элемента 'js-parent'
+      const bElement = event.target.querySelector('.js-child');
+      // добавляем элементу 'js-child' класс 'hidden'
+      bElement.classList.add('hidden');
+    } else {
+      console.log(event) 
+      resetElements()
+      // если нет, то добавляем элементу 'js-parent' класс 'active'
+      event.target.classList.add('active');
+      // находим элемент 'js-child' внутри текущего элемента 'js-parent'
+      const bElement = event.target.querySelector('.js-child');
+      // убираем у элемента 'js-child' класс 'hidden'
+      bElement.classList.remove('hidden');
+    }
+    event.stopPropagation();
   }
-  event.stopPropagation();
 }
 
 // функция, которая возвращает все элементы к начальному состоянию

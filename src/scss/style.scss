@@ -38,7 +38,7 @@ $desktop-width: 1920;
 $tablet: 1199.5px;
 $mobile: 767.5px;
 
-h3 {
+.otherBlock_title {
 	font-style: normal;
 	font-weight: 900;
 	font-size: desktop-vw(30);
@@ -69,6 +69,10 @@ body{
 	height: 100%;
 }
 
+ul {
+	padding: 0 0 0 desktop-vw(25);
+}
+
 // @media screen and (max-width: 1600px) {
 // 	.container {
 // 		max-width: desktop-vw(1600);
@@ -89,17 +93,44 @@ body{
 // 	}
 // }
 
+.linkBackOrMore {
+	display: block;
+	font-style: normal;
+	font-weight: 900;
+	font-size: desktop-vw(16);
+	line-height: 120%;
+	text-align: center;
+	color: #07512F;
+	width: max-content;
+	position: relative;
+	margin: 0 auto;
+	text-decoration: none;
+
+	&:after {
+		content: "";
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		background: #FFDB00;
+		bottom: desktop-vw(-5);
+		left: 0;
+	}
+}
+
 .blockFon {
 	position: relative;
 	padding: desktop-vw(70) 0 0;
 	overflow: hidden;
 	width: 100%;
 
+	&.otherPage {
+		padding: 0;
+	}
+
 	&_img {
 		position: absolute;
 		object-fit: cover;
 		width: 100%;
-		height: 100%;
 		top: 0;
 		left: 0;
 		z-index: -1;
@@ -114,6 +145,24 @@ body{
 }
 
 @media screen and (max-width: $tablet) {
+
+	ul {
+		padding: 0 0 0 tablet-vw(25);
+	}
+
+	.otherBlock_title {
+		font-size: tablet-vw(25);
+	}
+
+	.linkBackOrMore  {
+		font-size: tablet-vw(16);
+		margin-top: tablet-vw(10);
+
+		&:after {
+			bottom: tablet-vw(-5);
+		}
+	}
+
 	h3 {
 		font-size: tablet-vw(20);
 	}
@@ -137,6 +186,24 @@ body{
 	}
 }
 @media screen and (max-width: $mobile) {
+
+	ul {
+		padding: 0 0 0 mobile-vw(25);
+	}
+
+	.otherBlock_title {
+		font-size: mobile-vw(20);
+	}
+
+	.linkBackOrMore  {
+		font-size: mobile-vw(16);
+		margin-top: mobile-vw(10);
+
+		&:after {
+			bottom: mobile-vw(-5);
+		}
+	}
+
 	h3 {
 		font-size: mobile-vw(16);
 	}
@@ -168,3 +235,4 @@ body{
 @import "popular";
 @import "breadcrumbs";
 @import "personal";
+@import "blockMediaroom";
