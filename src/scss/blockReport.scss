@@ -1,0 +1,218 @@
+.report {
+    padding-bottom: desktop-vw(46);
+
+    &_wrapForm {
+        background: #FFFFFF;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+        max-width: 1010px;
+        padding: desktop-vw(30) desktop-vw(110) desktop-vw(76) desktop-vw(110);
+        margin: 0 auto desktop-vw(70) auto; 
+
+        .otherBlock_title {
+            text-align: center;
+            margin-bottom: desktop-vw(30);
+        }
+
+        p {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: desktop-vw(16);
+            line-height: 120%;
+            text-align: center;
+            color: #000000;
+            margin-bottom: desktop-vw(15);
+        }
+    }
+
+    &_fio {
+        display: flex;
+        grid-gap: desktop-vw(30);
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        grid-gap: desktop-vw(20);
+    }
+
+    &_wrapInput {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 612px;
+        
+        label {
+            font-style: normal;
+            font-weight: 800;
+            font-size: desktop-vw(16);
+            line-height: 130%;
+            color: #07512F;
+        }
+
+        textarea {
+            resize: none;
+            height: desktop-vw(260);
+            padding: desktop-vw(16) desktop-vw(10);
+            margin-bottom: desktop-vw(60);
+        }
+
+        input, textarea {
+            border: 1px solid rgba(255, 219, 0, 0.8);
+            box-shadow: 0px 10px 10px rgba(229, 229, 229, 0.6);
+            border-radius: desktop-vw(15);
+            padding: desktop-vw(15) desktop-vw(10);
+
+            &::placeholder {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: desktop-vw(16);
+                line-height: 120%;
+                color: #C4C4C4;
+            }
+        }
+    }
+
+    &_submit_btn {
+        background: #FFF500;
+        box-shadow: 0px 20px 20px rgba(255, 245, 0, 0.3);
+        border-radius: desktop-vw(50);
+        height: desktop-vw(48);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: desktop-vw(18);
+        line-height: 120%;
+        display: flex;
+        align-items: center;
+        color: #07512F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        max-width: desktop-vw(157);
+        width: 100%;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .report {
+        padding-bottom: tablet-vw(46);
+    
+        &_wrapForm {
+            padding: tablet-vw(30) tablet-vw(40) tablet-vw(76) tablet-vw(40);
+            margin: 0 auto tablet-vw(70) auto; 
+    
+            .otherBlock_title {
+                margin-bottom: tablet-vw(30);
+            }
+    
+            p {
+                font-size: tablet-vw(16);
+                margin-bottom: tablet-vw(15);
+            }
+        }
+    
+        &_fio {
+            grid-gap: tablet-vw(20);
+        }
+    
+        &_form {
+            grid-gap: tablet-vw(20);
+        }
+    
+        &_wrapInput {
+            max-width: 100%;
+            
+            label {
+                font-size: tablet-vw(16);
+            }
+    
+            textarea {
+                resize: none;
+                height: tablet-vw(260);
+                padding: tablet-vw(16) tablet-vw(10);
+                margin-bottom: tablet-vw(30);
+            }
+    
+            input, textarea {
+                border-radius: tablet-vw(15);
+                padding: tablet-vw(15) tablet-vw(10);
+    
+                &::placeholder {
+                    font-size: tablet-vw(16);
+                }
+            }
+        }
+    
+        &_submit_btn {
+            border-radius: tablet-vw(50);
+            height: tablet-vw(48);
+            font-size: tablet-vw(18);
+            max-width: tablet-vw(157);
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .report {
+        padding-bottom: mobile-vw(46);
+    
+        &_wrapForm {
+            padding: mobile-vw(30) mobile-vw(15) mobile-vw(46) mobile-vw(15);
+            margin: 0 auto mobile-vw(40) auto; 
+    
+            .otherBlock_title {
+                margin-bottom: mobile-vw(30);
+            }
+    
+            p {
+                font-size: mobile-vw(16);
+                margin-bottom: mobile-vw(15);
+            }
+        }
+    
+        &_fio {
+            flex-direction: column;
+            grid-gap: mobile-vw(20);
+        }
+    
+        &_form {
+            grid-gap: mobile-vw(20);
+        }
+    
+        &_wrapInput {
+            max-width: 100%;
+            
+            label {
+                font-size: mobile-vw(16);
+            }
+    
+            textarea {
+                resize: none;
+                height: mobile-vw(260);
+                padding: mobile-vw(16) mobile-vw(10);
+                margin-bottom: mobile-vw(30);
+            }
+    
+            input, textarea {
+                border-radius: mobile-vw(15);
+                padding: mobile-vw(15) mobile-vw(10);
+    
+                &::placeholder {
+                    font-size: mobile-vw(16);
+                }
+            }
+        }
+    
+        &_submit_btn {
+            border-radius: mobile-vw(50);
+            height: mobile-vw(48);
+            font-size: mobile-vw(18);
+            max-width: mobile-vw(157);
+        }
+    }
+}

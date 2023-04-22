@@ -442,11 +442,13 @@
     &_submenu {
       padding: mobile-vw(27);
       grid-gap: mobile-vw(20);
-      min-width: mobile-vw(211);
+      min-width: mobile-vw(231);
+      width: 100%;
       left: mobile-vw(159);
   
       &_item {
         font-size: mobile-vw(16);
+        width: auto;
   
         &:hover {
           font-size: mobile-vw(16);

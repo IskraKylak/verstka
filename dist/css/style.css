@@ -1372,6 +1372,165 @@ ul {
           box-shadow: 0px 10px 10px rgba(255, 245, 0, 0.3);
 }
 
+.report {
+  padding-bottom: 2.3958333333vw;
+}
+
+.report_wrapForm {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+  max-width: 1010px;
+  padding: 1.5625vw 5.7291666667vw 3.9583333333vw 5.7291666667vw;
+  margin: 0 auto 3.6458333333vw auto;
+}
+
+.report_wrapForm .otherBlock_title {
+  text-align: center;
+  margin-bottom: 1.5625vw;
+}
+
+.report_wrapForm p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0.78125vw;
+}
+
+.report_fio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 1.5625vw;
+}
+
+.report_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 1.0416666667vw;
+}
+
+.report_wrapInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 612px;
+}
+
+.report_wrapInput label {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.8333333333vw;
+  line-height: 130%;
+  color: #07512F;
+}
+
+.report_wrapInput textarea {
+  resize: none;
+  height: 13.5416666667vw;
+  padding: 0.8333333333vw 0.5208333333vw;
+  margin-bottom: 3.125vw;
+}
+
+.report_wrapInput input,
+.report_wrapInput textarea {
+  border: 1px solid rgba(255, 219, 0, 0.8);
+  -webkit-box-shadow: 0px 10px 10px rgba(229, 229, 229, 0.6);
+          box-shadow: 0px 10px 10px rgba(229, 229, 229, 0.6);
+  border-radius: 0.78125vw;
+  padding: 0.78125vw 0.5208333333vw;
+}
+
+.report_wrapInput input::-webkit-input-placeholder, .report_wrapInput textarea::-webkit-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  color: #C4C4C4;
+}
+
+.report_wrapInput input::-moz-placeholder, .report_wrapInput textarea::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  color: #C4C4C4;
+}
+
+.report_wrapInput input:-ms-input-placeholder, .report_wrapInput textarea:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  color: #C4C4C4;
+}
+
+.report_wrapInput input::-ms-input-placeholder, .report_wrapInput textarea::-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  color: #C4C4C4;
+}
+
+.report_wrapInput input::placeholder,
+.report_wrapInput textarea::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  color: #C4C4C4;
+}
+
+.report_submit_btn {
+  background: #FFF500;
+  -webkit-box-shadow: 0px 20px 20px rgba(255, 245, 0, 0.3);
+          box-shadow: 0px 20px 20px rgba(255, 245, 0, 0.3);
+  border-radius: 2.6041666667vw;
+  height: 2.5vw;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9375vw;
+  line-height: 120%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #07512F;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  border: 0;
+  max-width: 8.1770833333vw;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1199.5px) {
   ul {
     padding: 0 0 0 3.2552083333vw;
@@ -1961,6 +2120,81 @@ ul {
     width: 1.5625vw;
     height: 1.6927083333vw;
   }
+
+  .report {
+    padding-bottom: 5.9895833333vw;
+  }
+
+  .report_wrapForm {
+    padding: 3.90625vw 5.2083333333vw 9.8958333333vw 5.2083333333vw;
+    margin: 0 auto 9.1145833333vw auto;
+  }
+
+  .report_wrapForm .otherBlock_title {
+    margin-bottom: 3.90625vw;
+  }
+
+  .report_wrapForm p {
+    font-size: 2.0833333333vw;
+    margin-bottom: 1.953125vw;
+  }
+
+  .report_fio {
+    grid-gap: 2.6041666667vw;
+  }
+
+  .report_form {
+    grid-gap: 2.6041666667vw;
+  }
+
+  .report_wrapInput {
+    max-width: 100%;
+  }
+
+  .report_wrapInput label {
+    font-size: 2.0833333333vw;
+  }
+
+  .report_wrapInput textarea {
+    resize: none;
+    height: 33.8541666667vw;
+    padding: 2.0833333333vw 1.3020833333vw;
+    margin-bottom: 3.90625vw;
+  }
+
+  .report_wrapInput input,
+  .report_wrapInput textarea {
+    border-radius: 1.953125vw;
+    padding: 1.953125vw 1.3020833333vw;
+  }
+
+  .report_wrapInput input::-webkit-input-placeholder, .report_wrapInput textarea::-webkit-input-placeholder {
+    font-size: 2.0833333333vw;
+  }
+
+  .report_wrapInput input::-moz-placeholder, .report_wrapInput textarea::-moz-placeholder {
+    font-size: 2.0833333333vw;
+  }
+
+  .report_wrapInput input:-ms-input-placeholder, .report_wrapInput textarea:-ms-input-placeholder {
+    font-size: 2.0833333333vw;
+  }
+
+  .report_wrapInput input::-ms-input-placeholder, .report_wrapInput textarea::-ms-input-placeholder {
+    font-size: 2.0833333333vw;
+  }
+
+  .report_wrapInput input::placeholder,
+  .report_wrapInput textarea::placeholder {
+    font-size: 2.0833333333vw;
+  }
+
+  .report_submit_btn {
+    border-radius: 6.5104166667vw;
+    height: 6.25vw;
+    font-size: 2.34375vw;
+    max-width: 20.4427083333vw;
+  }
 }
 
 @media screen and (max-width: 767.5px) {
@@ -2032,12 +2266,14 @@ ul {
   .header_submenu {
     padding: 6.5217391304vw;
     grid-gap: 4.8309178744vw;
-    min-width: 50.9661835749vw;
+    min-width: 55.7971014493vw;
+    width: 100%;
     left: 38.4057971014vw;
   }
 
   .header_submenu_item {
     font-size: 3.8647342995vw;
+    width: auto;
   }
 
   .header_submenu_item:hover {
@@ -2507,5 +2743,84 @@ ul {
   .pagination_item.next {
     width: 2.8985507246vw;
     height: 3.1400966184vw;
+  }
+
+  .report {
+    padding-bottom: 11.1111111111vw;
+  }
+
+  .report_wrapForm {
+    padding: 7.2463768116vw 3.6231884058vw 11.1111111111vw 3.6231884058vw;
+    margin: 0 auto 9.6618357488vw auto;
+  }
+
+  .report_wrapForm .otherBlock_title {
+    margin-bottom: 7.2463768116vw;
+  }
+
+  .report_wrapForm p {
+    font-size: 3.8647342995vw;
+    margin-bottom: 3.6231884058vw;
+  }
+
+  .report_fio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    grid-gap: 4.8309178744vw;
+  }
+
+  .report_form {
+    grid-gap: 4.8309178744vw;
+  }
+
+  .report_wrapInput {
+    max-width: 100%;
+  }
+
+  .report_wrapInput label {
+    font-size: 3.8647342995vw;
+  }
+
+  .report_wrapInput textarea {
+    resize: none;
+    height: 62.8019323671vw;
+    padding: 3.8647342995vw 2.4154589372vw;
+    margin-bottom: 7.2463768116vw;
+  }
+
+  .report_wrapInput input,
+  .report_wrapInput textarea {
+    border-radius: 3.6231884058vw;
+    padding: 3.6231884058vw 2.4154589372vw;
+  }
+
+  .report_wrapInput input::-webkit-input-placeholder, .report_wrapInput textarea::-webkit-input-placeholder {
+    font-size: 3.8647342995vw;
+  }
+
+  .report_wrapInput input::-moz-placeholder, .report_wrapInput textarea::-moz-placeholder {
+    font-size: 3.8647342995vw;
+  }
+
+  .report_wrapInput input:-ms-input-placeholder, .report_wrapInput textarea:-ms-input-placeholder {
+    font-size: 3.8647342995vw;
+  }
+
+  .report_wrapInput input::-ms-input-placeholder, .report_wrapInput textarea::-ms-input-placeholder {
+    font-size: 3.8647342995vw;
+  }
+
+  .report_wrapInput input::placeholder,
+  .report_wrapInput textarea::placeholder {
+    font-size: 3.8647342995vw;
+  }
+
+  .report_submit_btn {
+    border-radius: 12.077294686vw;
+    height: 11.5942028986vw;
+    font-size: 4.347826087vw;
+    max-width: 37.922705314vw;
   }
 }
