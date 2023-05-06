@@ -69,6 +69,19 @@ body{
 	height: 100%;
 }
 
+p {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 400;
+	font-size: desktop-vw(16);
+	line-height: 120%;
+	color: #000;
+}
+
+strong {
+	font-size: desktop-vw(16);
+}
+
 ul {
 	padding: 0 0 0 desktop-vw(25);
 }
@@ -146,6 +159,14 @@ ul {
 
 @media screen and (max-width: $tablet) {
 
+	strong {
+		font-size: tablet-vw(16);
+	}
+
+	p {
+		font-size: tablet-vw(16);
+	}
+
 	ul {
 		padding: 0 0 0 tablet-vw(25);
 	}
@@ -186,6 +207,14 @@ ul {
 	}
 }
 @media screen and (max-width: $mobile) {
+
+	strong {
+		font-size: mobile-vw(16);
+	}
+
+	p {
+		font-size: mobile-vw(14);
+	}
 
 	ul {
 		padding: 0 0 0 mobile-vw(25);
@@ -238,3 +267,4 @@ ul {
 @import "blockMediaroom";
 @import "blockBoardDesicions";
 @import "blockReport";
+@import "faq";

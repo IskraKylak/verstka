@@ -1,0 +1,122 @@
+.circle {
+    position: relative;
+    display: inline-block;
+    width: desktop-vw(22);
+    height: desktop-vw(21);
+    border-radius: 50%;
+    background-color: #da251d;
+    margin-right: desktop-vw(5);
+}
+  
+.circle::before,
+.circle::after {
+content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: desktop-vw(12);
+    height: desktop-vw(2);
+    background-color: #fff;
+}
+
+.circle::before {
+    transform: translate(-50%, -50%);
+}
+
+.circle::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion {
+    margin: desktop-vw(10) 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.itemFaq {
+    padding: desktop-vw(20) desktop-vw(10) desktop-vw(10) desktop-vw(10);
+    border-bottom: 1px solid rgba(229,229,229,.6);
+}
+
+.accordion-header {
+	cursor: pointer;
+    display: flex;
+    margin-bottom: desktop-vw(10);
+
+    &.open .circle:after {
+        display: none;
+    }
+}
+
+.accordion-header h2 {
+    margin: 0;
+}
+
+.accordion-body {
+    padding-left: desktop-vw(26);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+@media screen and (max-width: $tablet) {
+    .circle {
+        width: tablet-vw(22);
+        height: tablet-vw(21);
+        margin-right: tablet-vw(5);
+    }
+      
+    .circle::before,
+    .circle::after {
+    content: "";
+        width: tablet-vw(12);
+        height: tablet-vw(2);
+    }
+    
+    .accordion {
+        margin: tablet-vw(10) 0;
+    }
+    
+    .itemFaq {
+        padding: tablet-vw(20) tablet-vw(10) tablet-vw(10) tablet-vw(10);
+    }
+    
+    .accordion-header {
+        margin-bottom: tablet-vw(10);
+    }
+    
+    .accordion-body {
+        padding-left: tablet-vw(26);
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .circle {
+        min-width: mobile-vw(22);
+        min-height: mobile-vw(21);
+        margin-right: mobile-vw(5);
+    }
+      
+    .circle::before,
+    .circle::after {
+    content: "";
+        width: mobile-vw(12);
+        height: mobile-vw(2);
+    }
+    
+    .accordion {
+        margin: mobile-vw(10) 0;
+    }
+    
+    .itemFaq {
+        padding: mobile-vw(20) mobile-vw(10) mobile-vw(10) mobile-vw(10);
+    }
+    
+    .accordion-header {
+        margin-bottom: mobile-vw(10);
+    }
+    
+    .accordion-body {
+        padding-left: mobile-vw(26);
+    }
+}

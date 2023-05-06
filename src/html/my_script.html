@@ -90,4 +90,28 @@ document.body.addEventListener('click', function(event) {
   }
 });
 
+const accordions = document.querySelectorAll(".accordion-header");
+
+accordions.forEach((accordion) => {
+  accordion.addEventListener("click", () => {
+
+    if (!accordion.classList.contains('open')) {
+      accordion.classList.add('open')
+    } else {
+      accordion.classList.remove('open')
+    }
+    // получаем следующий элемент после заголовка
+    const accordionBody = accordion.nextElementSibling;
+
+    // проверяем, открыт ли блок
+    if (accordionBody.style.maxHeight) {
+      // если блок открыт, то закрываем его
+      accordionBody.style.maxHeight = null;
+    } else {
+      // если блок закрыт, то открываем его
+      accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+    }
+  });
+});
+
 </script>
