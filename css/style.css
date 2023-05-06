@@ -88,6 +88,19 @@ body {
   height: 100%;
 }
 
+p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  color: #000;
+}
+
+strong {
+  font-size: 0.8333333333vw;
+}
+
 ul {
   padding: 0 0 0 1.3020833333vw;
 }
@@ -1531,7 +1544,84 @@ ul {
   cursor: pointer;
 }
 
+.circle {
+  position: relative;
+  display: inline-block;
+  width: 1.1458333333vw;
+  height: 1.09375vw;
+  border-radius: 50%;
+  background-color: #da251d;
+  margin-right: 0.2604166667vw;
+}
+
+.circle::before,
+.circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.625vw;
+  height: 0.1041666667vw;
+  background-color: #fff;
+}
+
+.circle::before {
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.circle::after {
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+      -ms-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion {
+  margin: 0.5208333333vw 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.itemFaq {
+  padding: 1.0416666667vw 0.5208333333vw 0.5208333333vw 0.5208333333vw;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.6);
+}
+
+.accordion-header {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5208333333vw;
+}
+
+.accordion-header.open .circle:after {
+  display: none;
+}
+
+.accordion-header h2 {
+  margin: 0;
+}
+
+.accordion-body {
+  padding-left: 1.3541666667vw;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
 @media screen and (max-width: 1199.5px) {
+  strong {
+    font-size: 2.0833333333vw;
+  }
+
+  p {
+    font-size: 2.0833333333vw;
+  }
+
   ul {
     padding: 0 0 0 3.2552083333vw;
   }
@@ -2195,9 +2285,46 @@ ul {
     font-size: 2.34375vw;
     max-width: 20.4427083333vw;
   }
+
+  .circle {
+    width: 2.8645833333vw;
+    height: 2.734375vw;
+    margin-right: 0.6510416667vw;
+  }
+
+  .circle::before,
+  .circle::after {
+    content: "";
+    width: 1.5625vw;
+    height: 0.2604166667vw;
+  }
+
+  .accordion {
+    margin: 1.3020833333vw 0;
+  }
+
+  .itemFaq {
+    padding: 2.6041666667vw 1.3020833333vw 1.3020833333vw 1.3020833333vw;
+  }
+
+  .accordion-header {
+    margin-bottom: 1.3020833333vw;
+  }
+
+  .accordion-body {
+    padding-left: 3.3854166667vw;
+  }
 }
 
 @media screen and (max-width: 767.5px) {
+  strong {
+    font-size: 3.8647342995vw;
+  }
+
+  p {
+    font-size: 3.3816425121vw;
+  }
+
   ul {
     padding: 0 0 0 6.038647343vw;
   }
@@ -2822,5 +2949,34 @@ ul {
     height: 11.5942028986vw;
     font-size: 4.347826087vw;
     max-width: 37.922705314vw;
+  }
+
+  .circle {
+    min-width: 5.3140096618vw;
+    min-height: 5.0724637681vw;
+    margin-right: 1.2077294686vw;
+  }
+
+  .circle::before,
+  .circle::after {
+    content: "";
+    width: 2.8985507246vw;
+    height: 0.4830917874vw;
+  }
+
+  .accordion {
+    margin: 2.4154589372vw 0;
+  }
+
+  .itemFaq {
+    padding: 4.8309178744vw 2.4154589372vw 2.4154589372vw 2.4154589372vw;
+  }
+
+  .accordion-header {
+    margin-bottom: 2.4154589372vw;
+  }
+
+  .accordion-body {
+    padding-left: 6.2801932367vw;
   }
 }
